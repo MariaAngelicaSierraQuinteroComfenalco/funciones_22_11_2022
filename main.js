@@ -3,19 +3,11 @@
 // https://www.youtube.com/watch?v=MiH3pbP4EFc&ab_channel=FernandoHerrera
 addEventListener("DOMContentLoaded", (e)=>{
  
-    //La funcion por declaracion es de las mas utlizadas ya que esta 
-    //estara declarara para poder utlizarla a lo largo del codigo
-    function saludar() {
-        return "Hola";
-      }
-      
-      saludar(); //al poner en nombre de la funcion le decimos que ejecute 
-       // podriamos ponerlo antes de haber creado la funcion porque 
-      //sin embargo javascript leera primero las funciones sin importar el orden 
-     
-      typeof saludar; // 'function'
-
+    //La funcion como objeto no estan utlizada pero es interesante
+    //Esta utilizamos la creacion de un objeto y la funcion juntas 
+    const saludar = new Function("return 'Hola';");
+    //el nombre a utlizar seria el de la variable 
+    saludar(); // 'Hola'
     console.log(saludar());
-    
 
 })
