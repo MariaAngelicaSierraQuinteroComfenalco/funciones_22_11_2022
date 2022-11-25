@@ -3,16 +3,29 @@
 // https://www.youtube.com/watch?v=MiH3pbP4EFc&ab_channel=FernandoHerrera
 addEventListener("DOMContentLoaded", (e) => {
 
-    //La funcion anonima son las declaraciones de funciones sin nombre pero estando dentro de una variable
-    const saludo = function () {
-      return "Hola";
-    };
-    //Para poder ejecutar la funcion debemos utlizar el nombre de la variable ya que el
-    //nombre de la funcion no lo tenfremos
-    saludo; // al ponerlas sin parentesis nos devulve la funcion completa ƒ () { return 'Hola'; }
-    saludo(); //pero si esta con parentesis nos muestra el retorno de la funcion 
-  
-    console.log(saludo);//poder visualizar en consola
-    console.log(saludo());
-  
-  })
+    //La funcion autoejecutables son funciones anonimas que se ejecutan mediante la marcha del codigo
+//lo unico que necesitamos es envolver la funcion anonima entre parentesis 
+
+// Función autoejecutable
+(function () {
+  console.log("Hola!!");
+})();
+
+
+// Función autoejecutable con parámetros
+(function (name) {
+  console.log(`¡Hola, ${name}!`);
+})("Manz");
+//no es necesario poner nombre a la funcion ya que es anonima 
+
+//al hacer un return lo que almacena la variable es el valor de la funcion 
+const f = (function (name) {
+  return `¡Hola, ${name}!`;
+})("Manz");
+
+f; // '¡Hola, Manz!`
+typeof f; // 'string'
+
+
+})
+
