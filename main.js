@@ -3,26 +3,21 @@
 // https://www.youtube.com/watch?v=MiH3pbP4EFc&ab_channel=FernandoHerrera
 addEventListener("DOMContentLoaded", (e) => {
 
-// una clausura se podria definir como una funcion que encierra las variables 
-//la variable es incr esta guardando lo que devuelve la funcion es uan funcion anonima y autoejecutable que tiene clausura 
-//estamos creando dentro de la funcion una varible que va aumentando el valor y devolverlo 
-// Clausura: Función incr()
-const incr = (function () {
-  let num = 0; // la declaramos en cero
-  return function () {
-  num++;// hace que vaya aumentando 
-  return num;//retorna el valor
+//Las Arrow functions son funciones flechas es decir no se utliza la palabra function
+// sino de utiliza => antes de las llaves 
+  const func = function () {
+    return "Función tradicional.";
   };
-})();
+  // funcion flechas 
+  const fun= () => {
+    return "Función flecha.";
+  };
+// estas tiene una ventaja ya que se pueden simplificar varias cosas como
+//si el cuerpo es de una sola linea no llevara llaves y si sucede no es necesario el return
+// en caso que la funcion no tenga parametros seria asi  () =>
+//si solo tiene uno se puede indicar con el nombre del mismo e =>
+// en casi de 2 o mas parametros seria asi (a, b) =>
 
-typeof incr; // 'function'
-incr(); // 1
-incr(); // 2
-incr(); // 3
-
-console.log(incr());
-console.log(incr());
-console.log(incr());
-console.log(incr());
 })
 
+ 
